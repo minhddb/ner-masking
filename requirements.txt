@@ -1,0 +1,8 @@
+accelerate
+datasets~=2.18.0
+evaluate~=0.4.1
+numpy~=1.26.4
+seqeval
+torch~=2.2.2
+transformers~=4.39.3
+spacy~=3.7.4

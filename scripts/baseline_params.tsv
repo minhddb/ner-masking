@@ -1,0 +1,7 @@
+dataset	model	epochs	learning_rate
+conll2003	FacebookAI/roberta-base	7	5e-06
+conll2003	FacebookAI/xlm-roberta-base	5	3e-05
+conll2003	google-bert/bert-base-cased	7	3e-05
+wnut_17	FacebookAI/roberta-base	7	3e-05
+wnut_17	FacebookAI/xlm-roberta-base	5	3e-05
+wnut_17	google-bert/bert-base-cased	5	5e-05
