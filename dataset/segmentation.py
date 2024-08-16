@@ -69,8 +69,11 @@ class SequenceSegmentation:
 
 
 if __name__ == "__main__":
-    tokens = ["My", "name", "is", "Monkey", "D.", "Ruffy", "and", "I'm", "King", "of", "the", "pirate", "."]
-    tags = ["O", "O", "O", "B-PER", "I-PER", "I-PER", "O", "O", "B-TITLE", "I-TITLE", "I-TITLE", "I-TITLE", "O"]
+    tokens = ['The', 'European', 'Commission', 'said', 'on', 'Thursday', 'it', 'disagreed', 'with', 'German', 'advice',
+              'to', 'consumers', 'to', 'shun', 'British', 'lamb', 'until', 'scientists', 'determine', 'whether', 'mad',
+              'cow', 'disease', 'can', 'be', 'transmitted', 'to', 'sheep', '.']
+    tags = ['O', 'B-ORG', 'I-ORG', 'O', 'O', 'O', 'O', 'O', 'O', 'B-MISC', 'O', 'O', 'O', 'O', 'O', 'B-MISC', 'O', 'O',
+            'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
     assert len(tokens) == len(tags), f"{len(tokens)}, {len(tags)}"
     segmentation = SequenceSegmentation(tokens, tags)
     print()
