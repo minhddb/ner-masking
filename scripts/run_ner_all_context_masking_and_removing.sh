@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo -e "dataset\tmodel\trun\twindows_size\tstrategy\tmask_ratio\tepochs\tlearning_rate\tbatch\tprecision\trecall\tf1" > ../results/results_mask_context.tsv
+echo -e "dataset\tmodel\trun\twindows_size\tstrategy\tmask_ratio\tepochs\tlearning_rate\tbatch\tprecision\trecall\tf1" > ../results/results_mask_and_remove_all.tsv
 
 strategies="all_context remove"
 
@@ -12,13 +12,13 @@ do
 						do
 								for se in $(seq 1 2)
 								do
-										rm -r ../models/ner-masked-context-model/
+										rm -r ../models/ner-all-masked-model/
 										CUDA_VISIBLE_DEVICES=0 ../run_ner.py \
 										--hf_dataset_name_or_path $dataset \
 										--model_name_or_path $model \
 										--text_column_name tokens \
 										--ner_tags ner_tags \
-										--output_dir ../models/ner-masked-context-model \
+										--output_dir ../models/ner-all-masked-model \
 										--windows_size 0 \
 										--strategy $strat \
 										--p_mask $ratio \
